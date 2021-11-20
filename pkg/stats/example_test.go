@@ -104,3 +104,4 @@ func ExampleTotalInCategory() {
 	// 300
 	// 800
 }
+
