@@ -8,8 +8,11 @@ func Avg(payments []types.Payment) types.Money {
 	var avg types.Money
 
 	for _, v := range payments {
-		if (v.Status != "FAIL") && (v.Amount > 0) {
+		if v.Status != "FAIL" {
 			avg += v.Amount
+		}
+		if v.Amount <= 0 {
+			avg +=0
 		}
 	}
 
