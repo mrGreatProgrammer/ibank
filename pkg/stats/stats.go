@@ -8,7 +8,7 @@ func Avg(payments []types.Payment) types.Money {
 	var avg types.Money
 
 	for _, v := range payments {
-		if v.Status != "FAIL" {
+		if v.Status != types.StatusFail {
 			avg += v.Amount
 		}
 		if v.Amount <= 0 {
@@ -25,7 +25,7 @@ func TotalInCategory(payments []types.Payment, category types.Category) types.Mo
 	var total types.Money
 
 	for _, v := range payments {
-		if (v.Category == category) && (v.Amount > 0) && (v.Status != "FAIL") {
+		if (v.Category == category) && (v.Amount > 0) && (v.Status != types.StatusFail) {
 			total += v.Amount
 		}
 	}
