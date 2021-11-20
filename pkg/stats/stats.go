@@ -11,14 +11,14 @@ func Avg(payments []types.Payment) types.Money {
 		if v.Status != types.StatusFail {
 			avg += v.Amount
 		}
-		if v.Amount <= 0 {
-			avg +=0
-		}
 	}
 
-	calcIt := int(avg) / len(payments)
+	lenOfTheArr:=types.Money(len(payments))
+	return avg/lenOfTheArr
 
-	return types.Money(calcIt)
+	// calcIt := int(avg) / len(payments)
+
+	// return types.Money(calcIt)
 }
 
 func TotalInCategory(payments []types.Payment, category types.Category) types.Money {
