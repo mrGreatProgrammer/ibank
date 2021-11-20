@@ -1,7 +1,7 @@
 package stats
 
 import (
-	"github.com/mrGreatProgrammer/payment-types/pkg/types"
+	"github.com/mrGreatProgrammer/payment-types/v2/pkg/types"
 )
 
 var theMoney types.Money

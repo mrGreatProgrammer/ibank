@@ -1,2 +1,4 @@
 github.com/mrGreatProgrammer/payment-types v0.0.0-20211120054116-164e5dc06464 h1:WAcKxMf+m9UKYSwdoOgwbp14aNbmAVnO4YGsKsVTRt4=
 github.com/mrGreatProgrammer/payment-types v0.0.0-20211120054116-164e5dc06464/go.mod h1:YMnOE0RQMMmuBl/7HnvE3SQhq8CfFBEfcdo4DNPKtJg=
+github.com/mrGreatProgrammer/payment-types/v2 v2.0.0 h1:Cty/g17k/80VoH2FgJ+eM1cGQgGT5NPfC0cNsm5sLUo=
+github.com/mrGreatProgrammer/payment-types/v2 v2.0.0/go.mod h1:IQWnEZTjk6FsOcxUT+owP70LNZGx5GdyjdNiP/D9Rhs=

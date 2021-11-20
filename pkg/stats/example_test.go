@@ -3,7 +3,7 @@ package stats
 import (
 	"fmt"
 
-	"github.com/mrGreatProgrammer/payment-types/pkg/types"
+	"github.com/mrGreatProgrammer/payment-types/v2/pkg/types"
 )
 
 func ExampleAvg() {
