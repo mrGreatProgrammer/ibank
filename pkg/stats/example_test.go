@@ -19,7 +19,7 @@ func ExampleAvg() {
 			ID:       2,
 			Amount:   5,
 			Category: "auto",
-			Status:   types.StatusOk,
+			Status:   types.StatusInProgress,
 		},
 		{
 			ID:       3,
@@ -39,6 +39,13 @@ func ExampleAvg() {
 			Category: "auto",
 			Status:   types.StatusOk,
 		},
+		{
+			ID:       6,
+			Amount:   3,
+			Category: "auto",
+			Status:   types.StatusFail,
+		},
+		
 	}
 
 	fmt.Println(Avg(payments))
