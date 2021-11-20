@@ -24,25 +24,25 @@ func ExampleAvg() {
 		{
 			ID: 3,
 			Amount: 300,
-			Category: "restaurant",
+			Category: "auto",
 			Status: types.StatusOk,
 		},
 		{
 			ID: 4,
 			Amount: 500,
-			Category: "restaurant",
+			Category: "auto",
 			Status: types.StatusOk,
 		},
 		{
 			ID: 5,
 			Amount: 400,
-			Category: "pharmacy",
+			Category: "auto",
 			Status: types.StatusInProgress,
 		},
 		{
 			ID: 6,
 			Amount: 400,
-			Category: "pharmacy",
+			Category: "auto",
 			Status: types.StatusFail,
 		},
 	}

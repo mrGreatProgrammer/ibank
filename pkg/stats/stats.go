@@ -4,13 +4,11 @@ import (
 	"github.com/mrGreatProgrammer/payment-types/v2/pkg/types"
 )
 
-// var theMoney types.Money
-
 func Avg(payments []types.Payment) types.Money {
 	var avg types.Money
 
 	for _, v := range payments {
-		if (v.Status != "FAIL") && (v.Amount > 0) {
+		if((v.Status != "FAIL") && (v.Amount > 0)) {
 			avg += v.Amount
 		}
 	}
@@ -24,7 +22,7 @@ func TotalInCategory(payments []types.Payment, category types.Category) types.Mo
 	var total types.Money
 
 	for _, v := range payments {
-		if (v.Category == category) && (v.Amount > 0) && (v.Status != "FAIL") {
+		if ((v.Category == category) && (v.Amount > 0) && (v.Status != "FAIL")) {
 			total += v.Amount
 		}
 	}
