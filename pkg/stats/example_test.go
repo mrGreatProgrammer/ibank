@@ -11,46 +11,47 @@ func ExampleAvg() {
 	var payments = []types.Payment{
 		{
 			ID:       1,
-			Amount:   200,
-			Category: "auto",
-			Status:   types.StatusInProgress,
-		},
-		{
-			ID:       2,
-			Amount:   100,
+			Amount:   2,
 			Category: "auto",
 			Status:   types.StatusOk,
 		},
 		{
+			ID:       2,
+			Amount:   5,
+			Category: "auto",
+			Status:   types.StatusInProgress,
+		},
+		{
 			ID:       3,
-			Amount:   300,
+			Amount:   4,
 			Category: "auto",
 			Status:   types.StatusOk,
 		},
 		{
 			ID:       4,
-			Amount:   500,
+			Amount:   6,
 			Category: "auto",
 			Status:   types.StatusOk,
 		},
 		{
 			ID:       5,
-			Amount:   400,
+			Amount:   3,
 			Category: "auto",
-			Status:   types.StatusInProgress,
+			Status:   types.StatusOk,
 		},
 		{
 			ID:       6,
-			Amount:   400,
+			Amount:   3,
 			Category: "auto",
 			Status:   types.StatusFail,
 		},
+		
 	}
 
 	fmt.Println(Avg(payments))
 
 	//Output:
-	// 250
+	// 4
 
 }
 
