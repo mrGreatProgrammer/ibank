@@ -10,40 +10,40 @@ func ExampleAvg() {
 
 	var payments = []types.Payment{
 		{
-			ID: 1,
-			Amount: 200,
+			ID:       1,
+			Amount:   200,
 			Category: "auto",
-			Status: types.StatusInProgress,
+			Status:   types.StatusInProgress,
 		},
 		{
-			ID: 2,
-			Amount: 100,
+			ID:       2,
+			Amount:   100,
 			Category: "auto",
-			Status: types.StatusOk,
+			Status:   types.StatusOk,
 		},
 		{
-			ID: 3,
-			Amount: 300,
-			Category: "restaurant",
-			Status: types.StatusOk,
+			ID:       3,
+			Amount:   300,
+			Category: "auto",
+			Status:   types.StatusOk,
 		},
 		{
-			ID: 4,
-			Amount: 500,
-			Category: "restaurant",
-			Status: types.StatusOk,
+			ID:       4,
+			Amount:   500,
+			Category: "auto",
+			Status:   types.StatusOk,
 		},
 		{
-			ID: 5,
-			Amount: 400,
-			Category: "pharmacy",
-			Status: types.StatusInProgress,
+			ID:       5,
+			Amount:   400,
+			Category: "auto",
+			Status:   types.StatusInProgress,
 		},
 		{
-			ID: 6,
-			Amount: 400,
-			Category: "pharmacy",
-			Status: types.StatusFail,
+			ID:       6,
+			Amount:   400,
+			Category: "auto",
+			Status:   types.StatusFail,
 		},
 	}
 
@@ -55,43 +55,43 @@ func ExampleAvg() {
 }
 
 func ExampleTotalInCategory() {
-	
+
 	var payments = []types.Payment{
 		{
-			ID: 1,
-			Amount: 200,
+			ID:       1,
+			Amount:   200,
 			Category: "auto",
-			Status: types.StatusInProgress,
+			Status:   types.StatusInProgress,
 		},
 		{
-			ID: 2,
-			Amount: 100,
+			ID:       2,
+			Amount:   100,
 			Category: "auto",
-			Status: types.StatusOk,
+			Status:   types.StatusOk,
 		},
 		{
-			ID: 3,
-			Amount: 300,
+			ID:       3,
+			Amount:   300,
 			Category: "restaurant",
-			Status: types.StatusOk,
+			Status:   types.StatusOk,
 		},
 		{
-			ID: 4,
-			Amount: 500,
+			ID:       4,
+			Amount:   500,
 			Category: "restaurant",
-			Status: types.StatusOk,
+			Status:   types.StatusOk,
 		},
 		{
-			ID: 5,
-			Amount: 400,
+			ID:       5,
+			Amount:   400,
 			Category: "pharmacy",
-			Status: types.StatusInProgress,
+			Status:   types.StatusInProgress,
 		},
 		{
-			ID: 6,
-			Amount: 400,
+			ID:       6,
+			Amount:   400,
 			Category: "pharmacy",
-			Status: types.StatusFail,
+			Status:   types.StatusFail,
 		},
 	}
 
@@ -104,3 +104,4 @@ func ExampleTotalInCategory() {
 	// 300
 	// 800
 }
+
