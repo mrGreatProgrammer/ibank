@@ -8,38 +8,49 @@ import (
 
 func ExampleAvg() {
 
-	var paymetns = []types.Payment{
+	var payments = []types.Payment{
 		{
-			ID:       1,
-			Amount:   200,
+			ID: 1,
+			Amount: 200,
 			Category: "auto",
+			Status: types.StatusInProgress,
 		},
 		{
-			ID:       2,
-			Amount:   100,
+			ID: 2,
+			Amount: 100,
 			Category: "auto",
+			Status: types.StatusOk,
 		},
 		{
-			ID:       3,
-			Amount:   300,
-			Category: "auto",
+			ID: 3,
+			Amount: 300,
+			Category: "restaurant",
+			Status: types.StatusOk,
 		},
 		{
-			ID:       4,
-			Amount:   500,
-			Category: "auto",
+			ID: 4,
+			Amount: 500,
+			Category: "restaurant",
+			Status: types.StatusOk,
 		},
 		{
-			ID:       5,
-			Amount:   400,
-			Category: "auto",
+			ID: 5,
+			Amount: 400,
+			Category: "pharmacy",
+			Status: types.StatusInProgress,
+		},
+		{
+			ID: 6,
+			Amount: 400,
+			Category: "pharmacy",
+			Status: types.StatusFail,
 		},
 	}
 
-	fmt.Println(Avg(paymetns))
+	fmt.Println(Avg(payments))
 
 	//Output:
-	// 300
+	// 250
 
 }
 
@@ -50,31 +61,37 @@ func ExampleTotalInCategory() {
 			ID: 1,
 			Amount: 200,
 			Category: "auto",
+			Status: types.StatusInProgress,
 		},
 		{
 			ID: 2,
 			Amount: 100,
 			Category: "auto",
+			Status: types.StatusOk,
 		},
 		{
 			ID: 3,
 			Amount: 300,
 			Category: "restaurant",
+			Status: types.StatusOk,
 		},
 		{
 			ID: 4,
 			Amount: 500,
 			Category: "restaurant",
+			Status: types.StatusOk,
 		},
 		{
 			ID: 5,
 			Amount: 400,
 			Category: "pharmacy",
+			Status: types.StatusInProgress,
 		},
 		{
 			ID: 6,
 			Amount: 400,
 			Category: "pharmacy",
+			Status: types.StatusFail,
 		},
 	}
 
@@ -83,7 +100,7 @@ func ExampleTotalInCategory() {
 	fmt.Println(TotalInCategory(payments, "restaurant"))
 
 	//Output:
-	// 800
+	// 400
 	// 300
 	// 800
 }
