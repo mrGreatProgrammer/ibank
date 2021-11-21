@@ -31,12 +31,33 @@ func TotalInCategory(payments []types.Payment, category types.Category) types.Mo
 	return total
 }
 
+func getOnlyCategories(arr []types.Payment) []types.Category {
+	var a = []types.Category{}
+
+	for _, v := range arr {
+		a = append(a, v.Category)
+	}
+
+	return a
+}
+
+func printUniqueValue(arr []types.Category) map[types.Category]types.Money {
+	var dict = map[types.Category]types.Money{}
+	count := types.Money(1)
+	for _, v := range arr {
+		dict[v] += count
+	}
+
+	return dict
+}
+
 func CategoriesAvg(payments []types.Payment) map[types.Category]types.Money {
-	avg := Avg(payments)
+	var onlyCategories = getOnlyCategories(payments)
+	var amountOfEachCategories = printUniqueValue(onlyCategories)
 	categories := map[types.Category]types.Money{}
 
 	for _, payment := range payments {
-		categories[payment.Category] += avg
+		categories[payment.Category] += payment.Amount / amountOfEachCategories[payment.Category]
 	}
 
 	return categories
