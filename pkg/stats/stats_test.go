@@ -28,52 +28,52 @@ func TestCategoriesAvg(t *testing.T) {
 	}
 }
 
-func TestPeriodsDinamic_one(t *testing.T) {
+func TestPeriodsDynamic_one(t *testing.T) {
 	first := map[types.Category]types.Money{"auto":10, "food": 20}
 	second := map[types.Category]types.Money{"auto": 5, "food": 3}
 
 	expected := map[types.Category]types.Money{"auto":-5, "food":-17}
 
-	result := PeriodsDinamic(first, second)
+	result := PeriodsDynamic(first, second)
 
 	if !reflect.DeepEqual(expected, result) {
 		t.Errorf("invalid result, expected: %v, actual: %v", expected, result)
 	}
 }
 
-func TestPeriodsDinamic_two(t *testing.T) {
+func TestPeriodsDynamic_two(t *testing.T) {
 	first := map[types.Category]types.Money{"auto":10, "food": 20}
 	second:= map[types.Category]types.Money{"auto": 20, "food": 20}
 
 	expected := map[types.Category]types.Money{"auto":10,  "food": 0}
 
-	result := PeriodsDinamic(first, second)
+	result := PeriodsDynamic(first, second)
 
 	if !reflect.DeepEqual(expected, result) {
 		t.Errorf("invalid result, expected: %v, actual: %v", expected, result)
 	}
 }
 
-func TestPeriodsDinamic_three(t *testing.T) {
+func TestPeriodsDynamic_three(t *testing.T) {
 	first := map[types.Category]types.Money{"auto":10, "food": 20}
 	second := map[types.Category]types.Money{"food": 20}
 
 	expected := map[types.Category]types.Money{"auto":-10, "food":0}
 
-	result := PeriodsDinamic(first, second)
+	result := PeriodsDynamic(first, second)
 
 	if !reflect.DeepEqual(expected, result) {
 		t.Errorf("invalid result, expected: %v, actual: %v", expected, result)
 	}
 }
 
-func TestPeriodsDinamic_four(t *testing.T) {
+func TestPeriodsDynamic_four(t *testing.T) {
 	first := map[types.Category]types.Money{"auto":10, "food": 20}
 	second := map[types.Category]types.Money{"auto": 10, "food": 25, "mobile": 5}
 
 	expected := map[types.Category]types.Money{"auto":0, "food": 5, "mobile":5}
 
-	result := PeriodsDinamic(first, second)
+	result := PeriodsDynamic(first, second)
 
 	if !reflect.DeepEqual(expected, result) {
 		t.Errorf("invalid result, expected: %v, actual: %v", expected, result)
